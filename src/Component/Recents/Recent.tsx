@@ -44,7 +44,7 @@ const Recent: React.FC<RecentProps> = ({ gaming }) => {
                         <div className='flex flex-col gap-10 mt-8 capitalize'>
                             {gaming.slice(0, 7).map((item, index) => (
                                 <Link key={item.id} href={`/post/${item.id}`}>
-                                    <div className='flex flex-col gap-2 bg-white shadow-xl p-3 rounded-lg max-w-[100%] lg:w-[600px] xl:w-[900px] h-[100%] lg:h-[500px] cursor-pointer'>
+                                    <div className='flex flex-col gap-2 bg-white shadow-xl p-3 rounded-lg max-w-[100%] lg:w-[100%] xl:w-[900px] h-[100%] lg:h-[500px] cursor-pointer'>
                                         <Image
                                             src={customImages[index] || item.image || '/r10.jpg'}
                                             alt={item.headed}
@@ -68,7 +68,7 @@ const Recent: React.FC<RecentProps> = ({ gaming }) => {
                     <div className='flex flex-col gap-6 w-[100%] lg:w-2/3'>
 
                         <div className='mt-8'>
-                            <div className='bg-white shadow-xl rounded-lg w-full h-[100%]'>
+                            <div className='bg-white shadow-xl rounded-lg w-[100%] h-[100%]'>
                                 <p className='h-[4px] bg-green-500 w-full'></p>
                                 <h1 className='text-xl font-semibold p-4 text-center'>SEARCH</h1>
                                 <div className='grid grid-cols-1 items-center gap-2 p-4'>
@@ -138,37 +138,35 @@ const Recent: React.FC<RecentProps> = ({ gaming }) => {
                         </div>
 
                         <div className='pt-8'>
-                            <div className='bg-white shadow-xl rounded-lg w-full h-[100%]'>
+                            <div className='bg-white shadow-xl rounded-lg w-full h-full'>
                                 <p className='h-[4px] bg-green-500 w-full'></p>
                                 <h1 className='text-xl font-semibold p-4 text-center'>AUTHORS</h1>
-                                <div className='flex flex-col items-center justify-between gap-4 p-4'>
+
+                                <div className='flex flex-col gap-4 p-4'>
                                     {authorsFive.map((author, i) => (
                                         <Link
                                             key={i}
                                             href={`https://www.reddit.com/u/${author}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className=' font-medium hover:text-green-500 transition-all duration-200 flex p-2 gap-10 border-b border-b-gray-500'
+                                            className='flex items-center gap-4 hover:text-green-500 transition-all duration-200 border-b border-b-gray-500 pb-8'
                                         >
                                             <Image
                                                 src="/alex.webp"
                                                 alt={author}
                                                 width={70}
                                                 height={70}
-                                                style={{ height: 'auto', maxWidth: '100%' }}
-                                                className="rounded-full w-auto "
+                                                className="rounded-full w-[70px] h-[70px] object-cover"
                                             />
-                                            <div className='w-[100%]  lg:w-[400px] pt-2'>
-                                                <p className="font-medium text-left text-lg">{author}</p>
-                                                <p className='text-gray-500 text-base text-left'>Author & developer of Bexer,</p>
+                                            <div className='flex-1'>
+                                                <p className="font-medium text-lg">{author}</p>
+                                                <p className='text-gray-500 text-base'>Author & developer of Bexer</p>
                                             </div>
                                         </Link>
                                     ))}
-
-
                                 </div>
-
                             </div>
+
                         </div>
 
 
