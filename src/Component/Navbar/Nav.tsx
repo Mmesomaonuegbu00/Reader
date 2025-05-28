@@ -25,9 +25,9 @@ const Nav: React.FC<NavProps> = ({ openNav }) => {
   }, [])
 
   return (
-    <div className={`fixed w-full border-b border-b-gray-500 z-[1000] ${navBg ? 'bg-white' : 'fixed'}`}>
+    <div className={`fixed w-full border-b border-b-gray-500 z-[1000] py-4 md:py-6 ${navBg ? 'bg-white' : 'fixed'}`}>
       <div className='w-[90%] lg:w-[80%] mx-auto my-auto'>
-        <div className='flex items-center h-full justify-between py-8'>
+        <div className='flex items-center h-full justify-between '>
           <h1 className='flex items-center text-3xl font-bold font-sans text-black gap-1 logo'>
             <span className='bg-green-500 rounded-xl px-2.5 py-1 rotate-45 inline-block'>
               <span className='-rotate-45 inline-block'>R</span>

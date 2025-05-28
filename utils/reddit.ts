@@ -39,6 +39,6 @@ export async function getRedditToken() {
       image: item.data.thumbnail?.startsWith('http') ? item.data.thumbnail : '/r1.webp',
       permalink: item.data.permalink,
     }));
-    
+  
   }
   
